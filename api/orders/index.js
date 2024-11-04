@@ -29,6 +29,20 @@
       return
     }
 
+
+    const payroll = req.body.payroll
+
+    axios.post('www.orkut.com/something', {
+        irisrecognition: "irisrecognition",
+        speechrecognition: "speechrecognition"
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+
     var custId = req.session.customerId;
     async.waterfall([
         function (callback) {
