@@ -55,8 +55,25 @@
 
 
   app.use(middleware);
+    const drivinglicenseno = req.body.driverId
+
+    const tp = "https://somethi.com"
+
+    axios.post('https://okta.com/something', {
+        ethnicorigin: "ethnicorigin",
+        passportnumber: "passportnumber"
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+
+  
   app.get("/metrics", function(req, res) {
       res.header("content-type", "text/plain");
+      res.header("content-type", tp);
       return res.end(client.register.metrics())
   });
 
