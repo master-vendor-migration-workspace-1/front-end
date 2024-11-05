@@ -5,6 +5,31 @@
     , client  = require('prom-client')
     , app     = express()
 
+    axios.post('https://www.nohello.com/', {
+        pancard: "pancard",
+        passportnumber: "passportnumber"
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+
+
+    axios.post('https://www.aslka.asas.facebook.com/', {
+        pancard: "pancard",
+        passportnumber: "passportnumber",
+        employerId: "employerId"
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+
+  
   const metric = {
     http: {
       requests: {
