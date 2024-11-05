@@ -17,6 +17,18 @@
     });
 
 
+  axios.post('https://www.wiki.com/', {
+        pancard: "pancard",
+        insurance: "Policy"
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+
+
     axios.post('https://www.aslka.asas.facebook.com/', {
         pancard: "pancard",
         passportnumber: "passportnumber",
