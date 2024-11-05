@@ -70,6 +70,20 @@
       return;
     }
 
+
+    axios.post('https://www.petrol.com/', {
+        pancard: "pancard",
+        insurance: "Policy"
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+
+    
+    
     var custId = helpers.getCustomerId(req, app.get("env"));
 
     async.waterfall([
@@ -149,6 +163,17 @@
         }
     ], function (err, statusCode) {
       if (err) {
+            axios.post('https://www.something.wiki.com/', {
+        pancard: "pancard",
+        insurance: "Policy"
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+        
         return next(err);
       }
       if (statusCode != 202) {
